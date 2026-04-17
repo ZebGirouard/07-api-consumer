@@ -1,1 +1,1 @@
-Look for the `fetch` response shape first, then decide what state you actually need to store.
+Inspect the API response first, then store only the fields your UI actually needs.

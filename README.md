@@ -1,16 +1,16 @@
 # 07 API Consumer
 
 ## Goal
-Fetch data from a public API and render it clearly so request/response becomes concrete.
+Search for books with a public API and render the results clearly so request/response becomes concrete.
 
 ## Start Here
 1. Run `npm install`.
 2. Run `npm run dev`.
-3. Finish the fetch flow in `src/App.jsx` so the page loads and displays remote data.
+3. Finish the form + fetch flow in `src/App.jsx` so a search term loads and displays book results.
 
-The project uses the JSONPlaceholder posts API to keep the backend simple.
+The project uses the Google Books API because it gives you a realistic search workflow without needing your own backend.
 
 ## Stretch Goals
-- Add an error state.
+- Add an empty-state message.
 - Add a loading spinner.
-- Let the user filter the results by search text.
+- Show the book cover when one is available.
