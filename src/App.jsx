@@ -7,10 +7,20 @@ export default function App() {
   useEffect(() => {
     async function loadPosts() {
       setStatus("loading");
+      try {
+        const response = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=5");
 
-      // Fetch the first 5 posts from JSONPlaceholder
-      // and store them in state with setPosts.
-      // If the request fails, set status to "error".
+        if (!response.ok) {
+          throw new Error("Request failed");
+        }
+
+        const data = await response.json();
+        setPosts(data);
+        setStatus("success");
+      } catch (error) {
+        console.error(error);
+        setStatus("error");
+      }
     }
 
     loadPosts();
