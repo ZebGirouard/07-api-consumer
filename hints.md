@@ -1,1 +1,1 @@
-Inspect the API response first, then store only the fields your UI actually needs.
+Inspect one real API response first. Then keep only the fields your UI needs to render a title, an author line, and an optional image.

@@ -9,10 +9,9 @@ export default function App() {
     async function loadBooks() {
       setStatus("loading");
 
-      // Fetch books from the Google Books API using the `query` state.
-      // Store a simplified list in `books` with:
-      // id, title, authors, and thumbnail.
-      // If the request fails, set status to "error".
+      // Which URL should you fetch if the search term lives in `query`?
+      // Which few fields from the API response are enough for this UI?
+      // If the request fails, what should the status become?
     }
 
     loadBooks();

@@ -6,7 +6,7 @@ Search for books with a public API and render the results clearly so request/res
 ## Start Here
 1. Run `npm install`.
 2. Run `npm run dev`.
-3. Finish the form + fetch flow in `src/App.jsx` so a search term loads and displays book results.
+3. Finish the search flow in `src/App.jsx` so submitting a term shows book results on the page.
 
 The project uses the Google Books API because it gives you a realistic search workflow without needing your own backend.
 
