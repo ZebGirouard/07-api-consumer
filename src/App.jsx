@@ -9,9 +9,23 @@ export default function App() {
     async function loadBooks() {
       setStatus("loading");
 
-      // Which URL should you fetch if the search term lives in `query`?
-      // Which few fields from the API response are enough for this UI?
-      // If the request fails, what should the status become?
+      try {
+        // Which URL should you fetch if the search term lives in `query`?
+        const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
+        const data = await response.json();
+
+        // What should happen here if `response.ok` is false?
+        // Which few fields from each item are enough for this UI?
+        // How could you safely handle a book that has no authors yet?
+        const nextBooks = [];
+
+        setBooks(nextBooks);
+        setStatus("success");
+      } catch (error) {
+        // If the request fails, what should the status become?
+        setBooks([]);
+        setStatus("error");
+      }
     }
 
     loadBooks();
